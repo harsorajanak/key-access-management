@@ -1,0 +1,23 @@
+{
+  "name": "token-information-service",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "scripts": {
+    "start": "node app.js",
+    "start:dev": "node app.js --watch"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.10.6",
+    "@grpc/proto-loader": "^0.7.12",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "method-override": "^3.0.0",
+    "path": "^0.12.7"
+  },
+  "engines": {
+    "node": ">=7.6.0",
+    "npm": ">=4.1.2"
+  }
+}

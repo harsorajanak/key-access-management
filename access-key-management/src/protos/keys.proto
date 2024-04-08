@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package keyManagement;
+
+service KeyManagementService {
+    rpc GetAccessToken(GetAuthTokenReq) returns (GetAuthTokenRes) {}
+    rpc Authorise(GetAuthoriseReq) returns (GetAuthoriseRes) {}
+}
+
+message GetAuthTokenReq {
+    string accessKey = 1;
+}
+
+message GetAuthTokenRes {
+    string accessToken = 1;
+}
+
+message GetAuthoriseReq {
+    string accessToken = 1;
+}
+
+message GetAuthoriseRes {
+    bool status = 1;
+    string message = 2;
+}
+  

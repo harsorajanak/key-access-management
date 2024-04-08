@@ -1,0 +1,673 @@
+{
+	"info": {
+		"_postman_id": "a53ae235-cb3a-471a-aae1-a388fc065fb1",
+		"name": "KeyManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1064103"
+	},
+	"item": [
+		{
+			"name": "CreateKey",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/key/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"key",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CreateKey",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/key/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"key",
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "159"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9f-nefoFdives1XyxUhNRiewJJNgIg\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 18:10:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"data\": {\n        \"id\": \"0181ca4e-dec1-4e01-867f-be5a6fb91abd\",\n        \"accessKey\": \"5b3efbf6e10f99b20b994541a83a1709\",\n        \"ttl\": 60,\n        \"limit\": 5,\n        \"accessTokenExpire\": \"1h\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "deleteKet",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/key/delete/0181ca4e-dec1-4e01-867f-be5a6fb91abd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"key",
+						"delete",
+						"0181ca4e-dec1-4e01-867f-be5a6fb91abd"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "deleteKet",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/key/delete/0181ca4e-dec1-4e01-867f-be5a6fb91abd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"key",
+								"delete",
+								"0181ca4e-dec1-4e01-867f-be5a6fb91abd"
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34-XDN5ElmIdVK2/9jOYlfBtSv77mI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 18:29:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"key deleted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "UpdateKey",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ttl\": 2,\n    \"limit\": 5,\n    \"accessTokenExpire\": \"2h\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/key/update/0181ca4e-dec1-4e01-867f-be5a6fb91abd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"key",
+						"update",
+						"0181ca4e-dec1-4e01-867f-be5a6fb91abd"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "UpdateKey",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ttl\": 2,\n    \"limit\": 5,\n    \"accessTokenExpire\": \"2h\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/key/update/0181ca4e-dec1-4e01-867f-be5a6fb91abd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"key",
+								"update",
+								"0181ca4e-dec1-4e01-867f-be5a6fb91abd"
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "158"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9e-J7EI6dZksNWn0LccrFACmcTcvRc\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 18:29:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"data\": {\n        \"id\": \"0181ca4e-dec1-4e01-867f-be5a6fb91abd\",\n        \"accessKey\": \"5b3efbf6e10f99b20b994541a83a1709\",\n        \"ttl\": 2,\n        \"limit\": 5,\n        \"accessTokenExpire\": \"2h\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "getTokenInformation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NLZXkiOiJhYzU2MWNhZDFlOTA3ZjcwZGE3ZmZiNDFhNTgyZmExNSIsImFjY2Vzc1Rva2VuIjoiIiwidHRsIjo2MCwibGltaXQiOjUsImFjY2Vzc1Rva2VuRXhwaXJlIjoiMWgiLCJjcmVhdGVkQXQiOjE3MTI2MDEwOTcwMDYsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3MTI2MDEwOTcsImV4cCI6MTcxMjYwNDY5N30.xGbu63lSRYpRXHiaexei8xeIYyoiMbvrtCiz5kCIxNI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/get-token-information",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get-token-information"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get-token-information",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NLZXkiOiI1YjNlZmJmNmUxMGY5OWIyMGI5OTQ1NDFhODNhMTcwOSIsImFjY2Vzc1Rva2VuIjoiIiwidHRsIjo2MCwibGltaXQiOjUsImFjY2Vzc1Rva2VuRXhwaXJlIjoiMWgiLCJjcmVhdGVkQXQiOjE3MTI1OTk4MTE2MjUsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3MTI1OTk4MTEsImV4cCI6MTcxMjYwMzQxMX0.Ak2csytSGNNoVKK-_Hu1hkPq8E2-4sbCpZRsZvsbcxY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/get-token-information",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"get-token-information"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"52-cq4M2y1HpwT0H4fX7qq90uaOQeQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 18:27:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": false,\n    \"message\": \"2 UNKNOWN: Too many request: please upgrade your plan\"\n}"
+				},
+				{
+					"name": "get-token-information",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NLZXkiOiI1YjNlZmJmNmUxMGY5OWIyMGI5OTQ1NDFhODNhMTcwOSIsImFjY2Vzc1Rva2VuIjoiIiwidHRsIjo2MCwibGltaXQiOjUsImFjY2Vzc1Rva2VuRXhwaXJlIjoiMWgiLCJjcmVhdGVkQXQiOjE3MTI1OTk4MTE2MjUsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3MTI1OTk4MTEsImV4cCI6MTcxMjYwMzQxMX0.Ak2csytSGNNoVKK-_Hu1hkPq8E2-4sbCpZRsZvsbcxY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/get-token-information",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"get-token-information"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3f-Fqi99trhKNlgqm/lyAsiJRhsXRI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 18:31:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": false,\n    \"message\": \"2 UNKNOWN: Access token is expired\"\n}"
+				},
+				{
+					"name": "get-token-information",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NLZXkiOiJhYzU2MWNhZDFlOTA3ZjcwZGE3ZmZiNDFhNTgyZmExNSIsImFjY2Vzc1Rva2VuIjoiIiwidHRsIjo2MCwibGltaXQiOjUsImFjY2Vzc1Rva2VuRXhwaXJlIjoiMWgiLCJjcmVhdGVkQXQiOjE3MTI2MDEwOTcwMDYsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3MTI2MDEwOTcsImV4cCI6MTcxMjYwNDY5N30.xGbu63lSRYpRXHiaexei8xeIYyoiMbvrtCiz5kCIxNI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/get-token-information",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"get-token-information"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "208"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d0-e4JoCMKWb2UrZuqO74fRPBRhOac\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 18:32:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"data\": {\n        \"accessKey\": \"ac561cad1e907f70da7ffb41a582fa15\",\n        \"accessToken\": \"\",\n        \"ttl\": 60,\n        \"limit\": 5,\n        \"accessTokenExpire\": \"1h\",\n        \"createdAt\": 1712601097006,\n        \"isActive\": true,\n        \"iat\": 1712601097,\n        \"exp\": 1712604697\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "getAccessToken",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "ac561cad1e907f70da7ffb41a582fa15",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/get-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get-token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getAccessToken",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "5b3efbf6e10f99b20b994541a83a1709",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/get-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"get-token"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "360"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"168-uEN8oBiYDR00ZeRMTh9yJBe6RWg\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 18:10:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NLZXkiOiI1YjNlZmJmNmUxMGY5OWIyMGI5OTQ1NDFhODNhMTcwOSIsImFjY2Vzc1Rva2VuIjoiIiwidHRsIjo2MCwibGltaXQiOjUsImFjY2Vzc1Rva2VuRXhwaXJlIjoiMWgiLCJjcmVhdGVkQXQiOjE3MTI1OTk4MTE2MjUsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3MTI1OTk4MTEsImV4cCI6MTcxMjYwMzQxMX0.Ak2csytSGNNoVKK-_Hu1hkPq8E2-4sbCpZRsZvsbcxY\"\n}"
+				},
+				{
+					"name": "getAccessToken",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "ac561cad1e907f70da7ffb41a582fa15",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/get-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"get-token"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3a-TPj/BQSudRhBpQlWJMj44lFzVQQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 08 Apr 2024 18:31:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": false,\n    \"message\": \"please enter valid access key\"\n}"
+				}
+			]
+		}
+	]
+}
